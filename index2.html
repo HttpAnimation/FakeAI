@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="indexer.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        #homeButton {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: #ffffff;
+            border: 2px solid #cccccc;
+            padding: 10px; /* Increased padding for a larger button */
+            cursor: pointer;
+            z-index: 9999;
+            width: 100%; /* Cover the entire width of the viewport */
+            height: 40px; /* Set the height */
+        }
+    </style>
+</head>
+<body>
+    <iframe id="iframe" src="https://deepai.org/chat" frameborder="0" sandbox="allow-same-origin allow-scripts"></iframe>
+    <div id="homeButton">Home</div>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.key === ']') {
+                navigateToIndex();
+            }
+        });
+
+        // Add click event for the home button
+        document.getElementById('homeButton').addEventListener('click', function() {
+            navigateToIndex();
+        });
+
+        // Page Visibility API to detect when the tab loses focus
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                navigateToIndex();
+            }
+        });
+
+        function navigateToIndex() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
