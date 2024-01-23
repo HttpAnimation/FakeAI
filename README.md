@@ -2,7 +2,7 @@
 FakeAI is a website that allows you to use AI at school and work with it showing up on the history.
 
 ## Installing
-1) If you have git installed, it will make it really easy. Just enter
+1) If you have git installed, it will make it seasy. Just enter
     ```
     git clone https://github.com/HttpAnimation/FakeAI.git
     ```
@@ -11,4 +11,4 @@ FakeAI is a website that allows you to use AI at school and work with it showing
 3) Unzip the **.zip** file, then open **index.html**
 
 ## Live
-This is not really recommended because this will show up with the URL "AI" in the network logs. If you don't care, go [here]().
+This is not recommended because this will show up with the URL "AI" in the network logs. If you don't care, go [here](https://httpanimation.github.io/FakeAI/).
