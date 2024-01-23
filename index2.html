@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google</title>
     <style>
+        body {
+            background: black;
+        }
+
         #homeButton {
             position: fixed;
             top: 10px;
@@ -27,7 +31,7 @@
         document.addEventListener('keydown', function(event) {
             if (event.key === ']') {
                 navigateToIndex();
-            }
+          }
         });
 
         // Add click event for the home button
@@ -46,5 +50,51 @@
             window.location.href = 'index.html';
         }
     </script>
+
+    <script>
+    // Create a photo cover element
+    var photoCover = document.createElement('div');
+    photoCover.style.position = 'fixed';
+    photoCover.style.top = '0';
+    photoCover.style.left = '0';
+    photoCover.style.width = '100%';
+    photoCover.style.height = '100%';
+    photoCover.style.backgroundColor = 'black';
+    photoCover.style.opacity = '0.8';
+    photoCover.style.zIndex = '9999';
+    photoCover.style.display = 'none';
+
+    // Create an image element for the photo
+    var photo = document.createElement('img');
+    photo.src = 'photo.png';
+    photo.style.display = 'block';
+    photo.style.margin = '0 auto';
+    photo.style.maxWidth = '100%';
+    photo.style.maxHeight = '100%';
+
+    // Append the photo to the photo cover element
+    photoCover.appendChild(photo);
+
+    // Add the photo cover element to the body
+    document.body.appendChild(photoCover);
+
+    // Add event listener for the keydown event
+    document.addEventListener('keydown', function(event) {
+        if (event.key === '[') {
+            togglePhotoCover();
+        }
+    });
+
+    /**
+     * Toggles the visibility of the photo cover
+     */
+    function togglePhotoCover() {
+        if (photoCover.style.display === 'none') {
+            photoCover.style.display = 'block';
+        } else {[]
+            photoCover.style.display = 'none';
+        }
+    }
+</script>
 </body>
 </html>
