@@ -46,7 +46,7 @@
      <img class="logo-img" src="logo.png" alt="google logo">
      <div class="search-bar">
      <i class="fas fa-search"></i>
-     <input id="search-input" class="search-input" type="text">
+     <input id="search-input" class="search-input" type="text" placeholder="[ = normal, ] = persent modde, p = updates">
       <i class="fas fa-keyboard"></i>
       <i class="fas fa-microphone"></i>
       </div>
@@ -96,6 +96,18 @@
     document.addEventListener('keydown', function(event) {
         if (event.key === '[') {
             window.location.href = 'index2.html';
+        }
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === ']') {
+            window.location.href = 'index3.html';
+        }
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'p') {
+            window.location.href = 'updates.html';
         }
     });
 </script>
